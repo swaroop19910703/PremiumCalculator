@@ -1,0 +1,58 @@
+@using PremiumCalculator.Models
+@{
+    ViewData["Title"] = "Premium Calculator";
+    var occupations = ViewBag.Occupations as IEnumerable<string> ?? new List<string>();
+}
+
+<h2>Premium Calculator (Enterprise)</h2>
+
+<div class="form-container">
+    <div class="form-field">
+        <label>Name</label>
+        <input id="name" type="text" />
+    </div>
+
+    <div class="form-field">
+        <label>Age Next Birthday</label>
+        <input id="age" type="number" />
+    </div>
+
+    <div class="form-field">
+        <label>Date of Birth (MM/YYYY)</label>
+        <input id="dob" type="text" placeholder="MM/YYYY" />
+    </div>
+
+    <div class="form-field">
+        <label>Occupation</label>
+        <select id="occupation">
+            <option value="">-- Select --</option>
+            @foreach (var occ in occupations)
+            {
+                <option value="@occ">@occ</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-field">
+        <label>Death – Sum Insured</label>
+        <input id="sum" type="number" />
+    </div>
+
+    <h3>Monthly Premium: <span id="premium">0</span></h3>
+</div>
+
+<section>
+    <h4>Occupation Ratings</h4>
+    <table>
+        <thead><tr><th>Occupation</th><th>Rating</th><th>Factor</th></tr></thead>
+        <tbody>
+            <tr><td>Cleaner</td><td>Light Manual</td><td>11.50</td></tr>
+            <tr><td>Doctor</td><td>Professional</td><td>1.50</td></tr>
+            <tr><td>Author</td><td>White Collar</td><td>2.25</td></tr>
+            <tr><td>Farmer</td><td>Heavy Manual</td><td>31.75</td></tr>
+            <tr><td>Mechanic</td><td>Heavy Manual</td><td>31.75</td></tr>
+            <tr><td>Florist</td><td>Light Manual</td><td>11.50</td></tr>
+            <tr><td>Other</td><td>Heavy Manual</td><td>31.75</td></tr>
+        </tbody>
+    </table>
+</section>

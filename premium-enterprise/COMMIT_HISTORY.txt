@@ -1,0 +1,11 @@
+Suggested sequential commits (use these exact messages when committing):
+01 - Initial commit: solution + projects skeleton
+02 - Add domain models: MemberInput, PremiumResult
+03 - Add repository: IOccupationRepository + InMemoryOccupationRepository
+04 - Add strategy: RatingStrategyFactory + SimpleRatingStrategy
+05 - Implement PremiumService and interface
+06 - Add MVC controller + Views (Index)
+07 - Add API controller (api/premium/calculate)
+08 - Add client JS + CSS + layout
+09 - Add unit tests (xUnit) for PremiumService
+10 - Update README and finalize

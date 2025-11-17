@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - PremiumCalculator</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/js/premium.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
